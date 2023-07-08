@@ -4,7 +4,6 @@ local mainMenu = MenuV:CreateMenu(false, 'Emote Menu', menuLocation, 220, 20, 60
 CreateThread(function()
     local commands = {}
     for k in pairs(Config.EmoteList) do
-        local label = k..'Options'
         local label = MenuV:CreateMenu(false, k, menuLocation, 220, 20, 60, menuSize, 'qbcore', 'menuv', k)
         mainMenu:AddButton({label = k, value = label, description = k..' Emotes'})
         label:On('open', function(menu)
