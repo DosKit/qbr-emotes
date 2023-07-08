@@ -14,7 +14,6 @@ CreateThread(function()
                 menu:AddButton({
                     label = l,
                     select = function(btn)
-                        print(btn)
                         ExecuteCommand(('e %s'):format(string.gsub(l, "%s", "-"):lower()))
                     end
                 })
