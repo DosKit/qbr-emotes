@@ -13,7 +13,8 @@ CreateThread(function()
             for l, n in pairs(Config.EmoteList[k]) do
                 menu:AddButton({
                     label = l,
-                    select = function(btn)
+                    description = ('/e %s'):format(string.gsub(l, "%s", "-"):lower()),
+                    select = function()
                         ExecuteCommand(('e %s'):format(string.gsub(l, "%s", "-"):lower()))
                     end
                 })
